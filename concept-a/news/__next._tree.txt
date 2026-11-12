@@ -1,5 +1,5 @@
-:HL["/jpinno-internal-ru9mm/_next/static/chunks/2h3qqjhb0vz6w.css","style"]
+:HL["/jpinno-internal-ru9mm/_next/static/chunks/25vm6r71n75jy.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style"]
 :HL["/jpinno-internal-ru9mm/img/brand/logo-color.png","image"]
 :HL["/jpinno-internal-ru9mm/img/visual/real-office.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"concept","param":{"type":"d","key":"concept-a","siblings":[]},"prefetchHints":4128,"slots":{"children":{"name":"news","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"80eDAqR-EEYvX9qTR3hcf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"concept","param":{"type":"d","key":"concept-a","siblings":[]},"prefetchHints":4128,"slots":{"children":{"name":"news","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"Nei4iJf4ZWAmJ23xi75Gl"}
