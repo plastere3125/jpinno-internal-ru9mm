@@ -135,7 +135,9 @@ ul, ol { list-style: none; }
 .case { position: relative; border-radius: var(--r); overflow: hidden; min-height: 520px; background: #111; color: #fff; display: block; }
 .case img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .case:hover img { transform: scale(1.03); }
-.case::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,12,18,.78), rgba(8,12,18,.05) 58%); }
+/* 사진 위쪽 하늘이 거의 흰색이라 페이지 배경과 섞여 둥근 모서리가 지저분해 보임 → 위쪽을 살짝 어둡게 + 1px 안쪽 테두리로 윤곽 고정 */
+.case { isolation: isolate; }
+.case::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(180deg, rgba(8,12,18,.38), rgba(8,12,18,0) 32%), linear-gradient(0deg, rgba(8,12,18,.78), rgba(8,12,18,.05) 58%); box-shadow: inset 0 0 0 1px rgba(8,12,18,.12); }
 .case .info { position: absolute; z-index: 2; left: 36px; right: 36px; bottom: 34px; }
 .case .tag { display: inline-block; font-size: 12.5px; font-weight: 700; padding: 6px 12px; border-radius: 14px; background: rgba(255,255,255,.18); backdrop-filter: blur(6px); }
 .case h3 { margin-top: 14px; font-size: 34px; line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; }

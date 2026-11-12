@@ -7,7 +7,11 @@
 <title>JP이노베이션 홈 — 디자인 7안 (내부 검토)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="styles.css">
-<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.test(location.search))document.documentElement.classList.add("js-intro");</script>
+<script>
+/* 인트로는 처음 들어올 때만. 세부페이지(로고·'홈' 클릭)에서 돌아온 경우는 생략 — 공유 링크는 같은 사이트 /concept-a/, 로컬은 개발 서버 localhost:3210 */
+(function(){var r=document.referrer||"";var back=/\/concept-[ab]\//.test(r)||/^https?:\/\/(localhost|127\.0\.0\.1):3210\//.test(r);
+if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.test(location.search))document.documentElement.classList.add("js-intro");})();
+</script>
 </head>
 <body>
 

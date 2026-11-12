@@ -3,6 +3,9 @@
   // 세부페이지 = 리뉴얼 사이트(concept-a). 로컬에서 열면 개발 서버, 공유 링크에서 열면 내부 공유 사이트. ?base= 로 바꿀 수 있음
   var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   var BASE = (new URLSearchParams(location.search).get("base") || (LOCAL ? "http://localhost:3210/concept-a/" : "https://plastere3125.github.io/jpinno-internal-ru9mm/concept-a/")).replace(/\/?$/, "/");
+  // 세부페이지 캐시 방지: GitHub Pages가 HTML을 10분간 저장 → 배포 직후에도 옛 세부페이지가 뜨지 않게 링크 뒤에 배포 버전 표시
+  var V = "?v=261112c";
+  var to = function (p) { return BASE + p + V; };
   var MENU = [
     ["회사소개", "company/overview/", [["회사개요", "company/overview/"], ["CEO 인사말", "company/ceo/"], ["비전", "company/vision/"], ["연혁·조직", "company/history/"], ["주요 고객사", "company/clients/"], ["오시는 길", "company/location/"]]],
     ["사업분야", "business/epc-engineering/", [["EPC 엔지니어링", "business/epc-engineering/"], ["이차전지", "business/secondary-battery/"], ["화장품", "business/cosmetics/"], ["제약·바이오", "business/pharma-bio/"], ["전자소재", "business/electronic-materials/"], ["석유화학", "business/petrochemical/"], ["건설산업", "business/construction/"]]],
@@ -11,20 +14,20 @@
     ["홍보센터", "news/", [["홍보센터", "news/"]]],
     ["고객지원", "support/inquiry/", [["사업·제품 문의", "support/inquiry/"], ["담당 연락처", "support/contact/"]]]
   ];
-  [].forEach.call(document.querySelectorAll("[data-to]"), function (a) { a.href = BASE + a.getAttribute("data-to"); });
+  [].forEach.call(document.querySelectorAll("[data-to]"), function (a) { a.href = to(a.getAttribute("data-to")); });
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var header = document.querySelector(".site-header");
   var gnb = header.querySelector(".gnb"), cols = header.querySelector(".mega .cols"), drawer = document.querySelector(".drawer");
   MENU.forEach(function (m) {
     var li = document.createElement("li");
-    li.innerHTML = '<a href="' + BASE + m[1] + '">' + m[0] + "</a>"; gnb.appendChild(li);
+    li.innerHTML = '<a href="' + to(m[1]) + '">' + m[0] + "</a>"; gnb.appendChild(li);
     var ul = document.createElement("ul");
-    ul.innerHTML = m[2].map(function (c) { return '<li><a href="' + BASE + c[1] + '">' + c[0] + "</a></li>"; }).join("");
+    ul.innerHTML = m[2].map(function (c) { return '<li><a href="' + to(c[1]) + '">' + c[0] + "</a></li>"; }).join("");
     cols.appendChild(ul);
     ["mouseenter", "focusin"].forEach(function (e) { ul.addEventListener(e, function () { li.classList.add("hot"); }); });
     ["mouseleave", "focusout"].forEach(function (e) { ul.addEventListener(e, function () { li.classList.remove("hot"); }); });
     var d = document.createElement("details");
-    d.innerHTML = "<summary>" + m[0] + "</summary><div>" + m[2].map(function (c) { return '<a href="' + BASE + c[1] + '">' + c[0] + "</a>"; }).join("") + "</div>";
+    d.innerHTML = "<summary>" + m[0] + "</summary><div>" + m[2].map(function (c) { return '<a href="' + to(c[1]) + '">' + c[0] + "</a>"; }).join("") + "</div>";
     drawer.appendChild(d);
   });
   var align = function () { var w = header.querySelector(".mega .wrap"); var pad = parseFloat(getComputedStyle(w).paddingLeft); cols.parentNode.style.setProperty("--cols-x", gnb.getBoundingClientRect().left - w.getBoundingClientRect().left - pad + "px"); };
