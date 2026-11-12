@@ -3,4 +3,4 @@
 :HL["/jpinno-internal-ru9mm/img/brand/logo-color.png","image"]
 :HL["/jpinno-internal-ru9mm/img/video/brand-film-poster.jpg","image"]
 :HL["/jpinno-internal-ru9mm/img/visual/sec01-bg02.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"g2ibYYR--pp3c6Dvlk99j"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"pOxyviWVEZluRUEZxLHuj"}
