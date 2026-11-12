@@ -1,7 +1,7 @@
-:HL["/jpinno-internal-ru9mm/_next/static/chunks/2fq34p5322jo8.css","style"]
+:HL["/jpinno-internal-ru9mm/_next/static/chunks/3p81rijd4ji62.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style"]
 :HL["/jpinno-internal-ru9mm/img/brand/logo-color.png","image"]
 :HL["/jpinno-internal-ru9mm/img/brand/logo-white.png","image"]
 :HL["/jpinno-internal-ru9mm/img/equipment/greeting-fixed-img.jpg","image"]
 :HL["/jpinno-internal-ru9mm/img/company/identity-img.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"concept","param":{"type":"d","key":"concept-b","siblings":[]},"prefetchHints":4128,"slots":{"children":{"name":"company","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"overview","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"7bZqS-ePgEpBc7uAi9MMR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"concept","param":{"type":"d","key":"concept-b","siblings":[]},"prefetchHints":4128,"slots":{"children":{"name":"company","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"overview","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"b2edta0lpH5sgWyLMm2U1"}
