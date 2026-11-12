@@ -1,7 +1,8 @@
 // 7안 공통 동작: 메가메뉴(기존 국문 메뉴·동작 유지), 헤더 상태, 첫 화면 슬라이드, 사업분야 탭, 등장 효과
 (function () {
-  // 세부페이지 = 리뉴얼 사이트(concept-a). 주소는 ?base= 로 바꿀 수 있음(배포 시안 주소 등)
-  var BASE = (new URLSearchParams(location.search).get("base") || "https://plastere3125.github.io/jpinno-internal-ru9mm/concept-a/").replace(/\/?$/, "/");
+  // 세부페이지 = 리뉴얼 사이트(concept-a). 로컬에서 열면 개발 서버, 공유 링크에서 열면 내부 공유 사이트. ?base= 로 바꿀 수 있음
+  var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var BASE = (new URLSearchParams(location.search).get("base") || (LOCAL ? "http://localhost:3210/concept-a/" : "https://plastere3125.github.io/jpinno-internal-ru9mm/concept-a/")).replace(/\/?$/, "/");
   var MENU = [
     ["회사소개", "company/overview/", [["회사개요", "company/overview/"], ["CEO 인사말", "company/ceo/"], ["비전", "company/vision/"], ["연혁·조직", "company/history/"], ["주요 고객사", "company/clients/"], ["오시는 길", "company/location/"]]],
     ["사업분야", "business/epc-engineering/", [["EPC 엔지니어링", "business/epc-engineering/"], ["이차전지", "business/secondary-battery/"], ["화장품", "business/cosmetics/"], ["제약·바이오", "business/pharma-bio/"], ["전자소재", "business/electronic-materials/"], ["석유화학", "business/petrochemical/"], ["건설산업", "business/construction/"]]],
@@ -39,10 +40,10 @@
   var onScroll = function () { header.classList.toggle("solid", scrollY > 10 || drawer.classList.contains("open")); };
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-  // 첫 화면 슬라이드: 6초 자동 전환 + 일시정지 버튼, 번호 클릭 이동. 동작 줄이기 설정이면 자동 전환 없음
+  // 첫 화면 슬라이드: 3초 자동 전환 + 일시정지 버튼, 번호 클릭 이동. 동작 줄이기 설정이면 자동 전환 없음
   var slides = [].slice.call(document.querySelectorAll(".slide")), idx = [].slice.call(document.querySelectorAll(".hero-ctrl li"));
   var ctrl = document.querySelector(".hero-ctrl"), pauseBtn = document.querySelector(".hero-ctrl .pause");
-  var cur = 0, timer = null, DUR = 6000, playing = !reduce && !/static/.test(location.search);
+  var cur = 0, timer = null, DUR = 3000, playing = !reduce && !/static/.test(location.search);
   var go = function (n) {
     slides[cur].classList.remove("on"); idx[cur].classList.remove("on"); idx[cur].querySelector("button").removeAttribute("aria-current");
     cur = (n + slides.length) % slides.length;
@@ -92,9 +93,9 @@
     tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i); t.tabIndex = j === i ? 0 : -1; panels[j].classList.toggle("on", j === i); });
     if (focus) tabs[i].focus();
   };
-  // 자동 롤링: 5초 간격, 구간이 화면에 보일 때만, 마우스를 올리거나 키보드 포커스 중에는 멈춤. 동작 줄이기 설정이면 자동 전환 없음
+  // 자동 롤링: 3초 간격, 구간이 화면에 보일 때만, 마우스를 올리거나 키보드 포커스 중에는 멈춤. 동작 줄이기 설정이면 자동 전환 없음
   var bizBox = document.querySelector(".biz .wrap"), tabBar = document.querySelector(".biz-tabs");
-  var BDUR = 5000, bCur = 0, bTimer = null, bInView = false, bHold = false, bAuto = !reduce && !/static/.test(location.search);
+  var BDUR = 3000, bCur = 0, bTimer = null, bInView = false, bHold = false, bAuto = !reduce && !/static/.test(location.search);
   tabBar.style.setProperty("--bdur", BDUR / 1000 + "s");
   var bRun = function () {
     clearTimeout(bTimer);

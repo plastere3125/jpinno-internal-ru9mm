@@ -69,7 +69,7 @@ ul, ol { list-style: none; }
 .hero-ctrl button.idx::after { width: 0; background: #fff; }
 .hero-ctrl li.on button.idx { color: #fff; }
 .hero-ctrl li.on button.idx small { opacity: 1; }
-.hero-ctrl li.on button.idx::after { width: 100%; transition: width var(--dur, 6s) linear; }
+.hero-ctrl li.on button.idx::after { width: 100%; transition: width var(--dur, 3s) linear; }
 .hero-ctrl.paused li.on button.idx::after { transition: none; width: 100%; }
 .hero-ctrl button.idx:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 .hero-ctrl .pause { all: unset; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.55); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; }
@@ -200,7 +200,15 @@ ul, ol { list-style: none; }
 /* ── 푸터 */
 .site-footer { background: var(--ink); color: rgba(255,255,255,.6); padding: 56px 0 40px; font-size: 13px; line-height: 1.75; }
 .site-footer .logo-f { height: 36px; width: auto; }
+.ftop { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+/* 공식 채널(네이버 블로그·유튜브·링크드인) — 사이트 본체 푸터와 같은 아이콘·주소 */
+.sns { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.sns a { --channel-ink: var(--ink); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); color: rgba(255,255,255,.82); display: inline-flex; align-items: center; justify-content: center; transition: background-color .2s, border-color .2s, color .2s; }
+.sns a:hover, .sns a:focus-visible { --channel-ink: #fff; background: #fff; border-color: #fff; color: var(--ink); }
+.sns a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.sns svg { width: 18px; height: 18px; display: block; }
 .fcols { margin-top: 26px; display: flex; gap: 64px; }
+.site-footer .nw { white-space: nowrap; }
 .fcols dt { color: #fff; font-weight: 600; margin-bottom: 4px; }
 .fbot { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 16px; }
 .fbot a { color: #fff; margin-right: 18px; }
@@ -523,6 +531,13 @@ a.fact:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(2
 @media (max-width: 767px) {
   @keyframes cardFlat { from { clip-path: inset(0 round 8vw); } to { clip-path: inset(0 round 0); } }
 }
+
+/* ── 인트로 v5 (2026-11-12 사용자 지시: 회전 없이 깔끔하게): 카드가 기울기·튕김 없이 바로 아래에서 수직으로 올라와 같은 자리에 반듯하게 겹침 → 확대(v4와 동일) */
+.js-intro .hero-inner .p1, .js-intro .hero-inner .p2, .js-intro .hero-inner .p3,
+.js-intro .hero-inner .p4, .js-intro .hero-inner .p5, .js-intro .slides { transform: translateY(240%); }
+.intro-start .hero-inner .pre, .intro-start .slides { transition-duration: .8s, .3s; transition-timing-function: cubic-bezier(.22, 1, .36, 1), ease; } /* 순서 지연(0~.42s)은 v4 값 유지 */
+.intro-start .hero-inner .p1, .intro-start .hero-inner .p2, .intro-start .hero-inner .p3,
+.intro-start .hero-inner .p4, .intro-start .hero-inner .p5, .intro-start .slides { transform: none; }
 
 /* 진행 막대: PNT처럼 화면 폭을 6칸이 똑같이 나눠 길게 (일시정지 버튼은 오른쪽 끝) */
 .hero-ctrl ol { flex: 1; max-width: none; gap: 28px; }
