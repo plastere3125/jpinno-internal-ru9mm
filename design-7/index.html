@@ -8,8 +8,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="styles.css">
 <script>
-/* 인트로는 처음 들어올 때만. 세부페이지(로고·'홈' 클릭)에서 돌아온 경우는 생략 — 공유 링크는 같은 사이트 /concept-a/, 로컬은 개발 서버 localhost:3210 */
-(function(){var r=document.referrer||"";var back=/\/concept-[ab]\//.test(r)||/^https?:\/\/(localhost|127\.0\.0\.1):3210\//.test(r);
+/* 인트로: 처음 들어올 때·새로고침(Cmd+R, Cmd+Shift+R)하면 나옴. 세부페이지(로고·'홈' 클릭)에서 돌아오거나 뒤로 가기로 온 경우만 생략
+   — 세부페이지 판별: 공유 링크는 같은 사이트 /concept-a/, 로컬은 개발 서버 localhost:3210 */
+(function(){var r=document.referrer||"";var nav=(performance.getEntriesByType&&performance.getEntriesByType("navigation")[0]||{}).type;
+var back=nav!=="reload"&&(nav==="back_forward"||/\/concept-[ab]\//.test(r)||/^https?:\/\/(localhost|127\.0\.0\.1):3210\//.test(r));
 if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.test(location.search))document.documentElement.classList.add("js-intro");})();
 </script>
 </head>
