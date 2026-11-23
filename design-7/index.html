@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>JP이노베이션 홈 — 디자인 7안 (내부 검토)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="styles.css?v=261123r">
+<link rel="stylesheet" href="styles.css?v=261123h">
 <script>
 /* 인트로: 처음 들어올 때·새로고침(Cmd+R, Cmd+Shift+R)하면 나옴. 세부페이지(로고·'홈' 클릭)에서 돌아오거나 뒤로 가기로 온 경우만 생략
    — 세부페이지 판별: 공유 링크는 같은 사이트 /concept-a/, 로컬은 개발 서버 localhost:3210 */
@@ -28,25 +28,25 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
 <nav class="drawer" aria-label="전체 메뉴"></nav>
 
 <main>
-  <!-- ① 첫 화면(기업 중심, 2026-11-23 수정본): 회사 전경·본사 정문(자사 브랜드 영상 원본 프레임)·ENG 연구소(클라이언트 제공 4K 사진). 산업별 슬라이드·ESG는 사업분야와 겹쳐 제외. 인트로 카드 = 회사소개서 21~23쪽 제작 사진(공개 확인 필요) -->
+  <!-- ① 첫 화면(기업 중심, 2026-11-23 b): 01 본사 항공(실사·재크롭) / 02 콘셉트 이미지(생성, JP 시설 아님) / 03 콘셉트 이미지(생성, PC·모바일 별도 파일). 이전 임시안=JP 표준 도면 합성(assets/hero/tmp-eng-drawing). 이전 메모: 첫 화면(기업 중심, 2026-11-23 수정본): 회사 전경·본사 정문(자사 브랜드 영상 원본 프레임)·ENG 연구소(클라이언트 제공 4K 사진). 산업별 슬라이드·ESG는 사업분야와 겹쳐 제외. 인트로 카드 = 이미 공개된 자산(본사 정문 영상 프레임·에이에스텍 실적·SK바이오텍 세종 실적·연구소 사진)으로 교체(11/23 d) -->
   <section class="hero" aria-roledescription="carousel" aria-label="JP이노베이션 소개">
    <div class="hero-inner">
-    <picture class="pre p1" aria-hidden="true"><img src="assets/intro/r-60.jpg" alt=""></picture>
-    <picture class="pre p2" aria-hidden="true"><img src="assets/intro/r-61.jpg" alt=""></picture>
-    <picture class="pre p3" aria-hidden="true"><img src="assets/intro/r-64.jpg" alt=""></picture>
-    <picture class="pre p4" aria-hidden="true"><img src="assets/intro/r-68.jpg" alt=""></picture>
-    <picture class="pre p5" aria-hidden="true"><img src="assets/intro/r-lab-entrance.jpg" alt=""></picture>
+    <picture class="pre p1" aria-hidden="true"><img src="assets/intro/pub-factory.jpg" alt=""></picture>
+    <picture class="pre p2" aria-hidden="true"><img src="assets/intro/pub-astech.jpg" alt=""></picture>
+    <picture class="pre p3" aria-hidden="true"><img src="assets/intro/pub-sk-sejong.jpg" alt=""></picture>
+    <picture class="pre p4" aria-hidden="true"><img src="assets/intro/pub-office.jpg" alt=""></picture>
+    <picture class="pre p5" aria-hidden="true"><img src="assets/intro/pub-lab-entrance.jpg" alt=""></picture>
     <div class="slides">
     <div class="slide on" aria-roledescription="slide" aria-label="1 / 3">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/aerial-m.jpg"><img src="assets/hero/aerial.jpg" alt="JP이노베이션 본사 공장 항공 전경"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/corp-aerial-m.jpg"><img src="assets/hero/corp-aerial.jpg" alt="JP이노베이션 화성 본사 항공 전경"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">고객의 성공을 위한 끝없는 혁신</p>
         <h2><span class="ln"><span>제약 바이오 및 이차전지,</span></span><span class="ln"><span>석유 정밀화학 플랜트 전문기업</span></span></h2>
-        <p class="ko">엔지니어링설계, 장비제작, 시공 및 사후관리까지 EPC(Turn-Key) 사업을 수행합니다.</p>
+        <p class="ko">엔지니어링설계, 장비제작, 시공 및 사후관리까지 <span class="nw">EPC(Turn-Key)</span> 사업을 수행합니다.</p>
       </div></div>
     </div>
     <div class="slide" aria-roledescription="slide" aria-label="2 / 3">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/c-factory-m.jpg"><img src="assets/hero/c-factory.jpg" alt="JP이노베이션 화성 본사 정문과 공장동" loading="lazy"></picture>
+      <picture><img src="assets/hero/g-industrial-orig.jpg" alt="스테인리스 반응기와 공정 배관 설비 (콘셉트 이미지)" loading="lazy" class="img-ind"></picture><span class="hero-note">콘셉트 이미지</span>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Manufacturing</p>
         <h2><span class="ln"><span>핵심 공정장비를</span></span><span class="ln"><span>자체 기술로 설계·제작</span></span></h2>
@@ -54,11 +54,11 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       </div></div>
     </div>
     <div class="slide dense" aria-roledescription="slide" aria-label="3 / 3">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/c-lab-m.jpg"><img src="assets/hero/c-lab.jpg" alt="제이피이노베이션 ENG 연구소 사무 공간" loading="lazy"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/g-engineering-m.jpg"><img src="assets/hero/g-engineering.jpg" alt="배관 설계 모델을 검토하는 엔지니어 (콘셉트 이미지)" loading="lazy"></picture><span class="hero-note">콘셉트 이미지</span>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Engineering</p>
         <h2><span class="ln"><span>엔지니어링 설계부터</span></span><span class="ln"><span>시공·사후관리까지</span></span></h2>
-        <p class="ko">2018년 동탄으로 확장 이전한 제이피이노베이션 ENG 연구소</p>
+        <p class="ko">장비 표준 사양부터 공정 엔지니어링까지 직접 설계합니다.</p>
       </div></div>
     </div>
     </div>
@@ -98,13 +98,13 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       <p class="eyebrow-s">Business</p>
       <h2 class="sec-title" id="biz-t">사업분야</h2>
       <div class="stage">
-        <div class="biz-panel on" role="tabpanel"><img class="bg" src="assets/biz/r-epc.jpg" alt="반응기 설치와 배관·전기 시공 현장" data-cap="반응기 납품 설치 · 배관·전기 시공" loading="eager"><div class="txt"><p class="no">01</p><h3>EPC 엔지니어링</h3><p class="en">EPC Engineering</p><ul><li>EPC (Turn-Key방식) 사업수행 - <span class="nw">엔지니어링설계, 장비제작,</span> <span class="nw">시공 및 사후관리</span></li><li>Global Standard Project 수행절차로 프로젝트 진행</li><li>Business Partner 사와 협력을 통해 성공적인 투자성과 제공</li></ul><a class="pill" href="#" data-to="business/epc-engineering/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/r-battery.jpg" alt="PD MIXER(20톤) 제작" data-cap="PD MIXER(20ton) 제작" loading="lazy"><div class="txt"><p class="no">02</p><h3>이차전지</h3><p class="en">Secondary Battery</p><ul><li>양극재 및 음극재 믹싱장비 (Mixing Equipment - Engineering &amp; Manufacturing)</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>믹싱 제조시설 엔지니어링 설계, 장비제작 및 시공</li></ul><a class="pill" href="#" data-to="business/secondary-battery/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/r-cosmetics.jpg" alt="아지호모 믹서" data-cap="JP 제품 · 아지호모 믹서" loading="lazy"><div class="txt"><p class="no">03</p><h3>화장품</h3><p class="en">Cosmetics</p><ul><li>공정의 특성에 맞는 특수한 기능과 메커니즘을 반영하여 믹서, 반응기, 여과기, 건조기 등을 제안, 적용</li><li>각 공정에 맞는 EPC Project 플랜트 설계 및 건설 수행</li></ul><a class="pill" href="#" data-to="business/cosmetics/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/r-pharma.jpg" alt="GMP 시설 반응기" data-cap="GMP 시설 반응기" loading="lazy"><div class="txt"><p class="no">04</p><h3>제약·바이오</h3><p class="en">Pharma &amp; Bio</p><ul><li>합성, 반응, 정제, 건조 공정에 필요한 모든 엔지니어링과 장비 구축</li><li>공정 제안, 시스템 구축, 플랜트 건설 수행</li><li>GMP 준수, 무균 청정 관리, 밸리데이션 제공</li></ul><a class="pill" href="#" data-to="business/pharma-bio/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/r-electronic.jpg" alt="압력용기 제작" data-cap="VESSEL 제작" loading="lazy"><div class="txt"><p class="no">05</p><h3>전자소재</h3><p class="en">Electronic Materials</p><ul><li>고품질의 특수합금(티타늄, 지르코늄)소재를 사용하여 제작 및 설치</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>정밀가공 및 고도의 제품 완성도를 자랑하는 전문성을 확보</li></ul><a class="pill" href="#" data-to="business/electronic-materials/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-sub-petro-bg.jpg" alt="석유화학 플랜트 야경" data-cap="석유화학 플랜트 (클라이언트 제공 원본)" loading="lazy"><div class="txt"><p class="no">06</p><h3>석유화학</h3><p class="en">Gas &amp; Petrochemical Plant</p><ul><li>Gas, Petrol Chemical, Oil Refinery Plant EPC기반 엔지니어링 설계, 장비제작, 시공 및 사업관리</li><li>베트남 등 해외법인 설립, 해외시장 진출 및 사업 진행</li></ul><a class="pill" href="#" data-to="business/petrochemical/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/r-construction.jpg" alt="SK바이오텍 세종공장 증설 EPC 항공 사진" data-cap="수행실적 · SK바이오텍 세종공장 증설 EPC (2024)" loading="lazy"><div class="txt"><p class="no">07</p><h3>건설산업</h3><p class="en">Construction</p><ul><li>EPC Project 엔지니어링과 Plant 시공, 건설 수행</li><li>이차전지, 반도체/전자소재, 제약, 바이오, 정밀화학, 석유화학 분야 국내외 고객사와 다양한 Plant 건설 실적 보유</li></ul><a class="pill" href="#" data-to="business/construction/">자세히 보기 →</a></div></div>
+        <div class="biz-panel on" role="tabpanel"><img class="bg" src="assets/biz/v-epc.jpg" alt="반응기 설치와 배관·전기 시공 현장" data-cap="반응기 납품 설치 · 배관·전기 시공" loading="eager"><div class="txt"><p class="no">01</p><h3>EPC 엔지니어링</h3><p class="en">EPC Engineering</p><ul><li>EPC (Turn-Key방식) 사업수행 - <span class="nw">엔지니어링설계, 장비제작,</span> <span class="nw">시공 및 사후관리</span></li><li>Global Standard Project 수행절차로 프로젝트 진행</li><li>Business Partner 사와 협력을 통해 성공적인 투자성과 제공</li></ul><a class="pill" href="#" data-to="business/epc-engineering/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/g-battery.jpg" alt="원료 공급 설비와 믹서로 구성된 전극 슬러리 제조 라인 (콘셉트 이미지)" data-cap="콘셉트 이미지" loading="lazy"><div class="txt"><p class="no">02</p><h3>이차전지</h3><p class="en">Secondary Battery</p><ul><li>양극재 및 음극재 믹싱장비 (Mixing Equipment - Engineering &amp; Manufacturing)</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>믹싱 제조시설 엔지니어링 설계, 장비제작 및 시공</li></ul><a class="pill" href="#" data-to="business/secondary-battery/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/g-cosmetics.jpg" alt="화장품 혼합·유화 생산실 (콘셉트 이미지)" data-cap="콘셉트 이미지" loading="lazy"><div class="txt"><p class="no">03</p><h3>화장품</h3><p class="en">Cosmetics</p><ul><li>공정의 특성에 맞는 특수한 기능과 메커니즘을 반영하여 믹서, 반응기, 여과기, 건조기 등을 제안, 적용</li><li>각 공정에 맞는 EPC Project 플랜트 설계 및 건설 수행</li></ul><a class="pill" href="#" data-to="business/cosmetics/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/v-pharma.jpg" alt="GMP 시설 반응기" data-cap="GMP 시설 반응기" loading="lazy"><div class="txt"><p class="no">04</p><h3>제약·바이오</h3><p class="en">Pharma &amp; Bio</p><ul><li>합성, 반응, 정제, 건조 공정에 필요한 모든 엔지니어링과 장비 구축</li><li>공정 제안, 시스템 구축, 플랜트 건설 수행</li><li>GMP 준수, 무균 청정 관리, 밸리데이션 제공</li></ul><a class="pill" href="#" data-to="business/pharma-bio/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/g-electronic.jpg" alt="반응기와 여과·건조 설비로 이어진 소재 공정 (콘셉트 이미지)" data-cap="콘셉트 이미지" loading="lazy"><div class="txt"><p class="no">05</p><h3>전자소재</h3><p class="en">Electronic Materials</p><ul><li>고품질의 특수합금(티타늄, 지르코늄)소재를 사용하여 제작 및 설치</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>정밀가공 및 고도의 제품 완성도를 자랑하는 전문성을 확보</li></ul><a class="pill" href="#" data-to="business/electronic-materials/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/g-petro.jpg" alt="증류탑과 배관 구조가 보이는 석유화학 플랜트 (콘셉트 이미지)" data-cap="콘셉트 이미지" loading="lazy"><div class="txt"><p class="no">06</p><h3>석유화학</h3><p class="en">Gas &amp; Petrochemical Plant</p><ul><li>Gas, Petrol Chemical, Oil Refinery Plant EPC기반 엔지니어링 설계, 장비제작, 시공 및 사업관리</li><li>베트남 등 해외법인 설립, 해외시장 진출 및 사업 진행</li></ul><a class="pill" href="#" data-to="business/petrochemical/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/g-construction.jpg" alt="철골 구조물에 용기를 인양하는 플랜트 시공 (콘셉트 이미지)" data-cap="콘셉트 이미지" loading="lazy"><div class="txt"><p class="no">07</p><h3>건설산업</h3><p class="en">Construction</p><ul><li>EPC Project 엔지니어링과 Plant 시공, 건설 수행</li><li>이차전지, 반도체/전자소재, 제약, 바이오, 정밀화학, 석유화학 분야 국내외 고객사와 다양한 Plant 건설 실적 보유</li></ul><a class="pill" href="#" data-to="business/construction/">자세히 보기 →</a></div></div>
       </div>
       <div class="biz-tabs" role="tablist" aria-label="사업분야">
         <button role="tab" aria-selected="true"><small>01</small>EPC 엔지니어링</button><button role="tab" aria-selected="false" tabindex="-1"><small>02</small>이차전지</button><button role="tab" aria-selected="false" tabindex="-1"><small>03</small>화장품</button><button role="tab" aria-selected="false" tabindex="-1"><small>04</small>제약·바이오</button><button role="tab" aria-selected="false" tabindex="-1"><small>05</small>전자소재</button><button role="tab" aria-selected="false" tabindex="-1"><small>06</small>석유화학</button><button role="tab" aria-selected="false" tabindex="-1"><small>07</small>건설산업</button>
@@ -136,7 +136,7 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
           <img src="assets/astech-2nd-plant.jpg" alt="에이에스텍 장항 2공장 준공 외관">
           <span class="go">→</span>
           <div class="info"><span class="tag">바이오 · 2024–2026</span><h3>에이에스텍 장항 2공장 신축</h3><p>EPC 전 과정 수행 · 2026.5 준공</p></div>
-          <span class="res">준공 실사 · 홍보센터 게시 이미지</span>
+          
         </a>
         <div class="facts">
           <a class="fact dark" href="#" data-to="tech/certifications/"><span>인증</span><div><b>U·U2·U3</b><em>S·PP 포함 5종 보유</em></div></a>
@@ -206,6 +206,6 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
     <div class="fbot"><span><a href="#" data-to="privacy/">개인정보처리방침</a><a href="#" data-to="sitemap/">사이트맵</a></span><span><span class="nw">© COPYRIGHT JP INNOVATION.</span> <span class="nw">ALL RIGHTS RESERVED.</span></span></div>
   </div>
 </footer>
-<script src="site.js?v=261123r"></script>
+<script src="site.js?v=261123e"></script>
 </body>
 </html>

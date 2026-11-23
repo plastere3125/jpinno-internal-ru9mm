@@ -4,7 +4,7 @@
   var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   var BASE = (new URLSearchParams(location.search).get("base") || (LOCAL ? "http://localhost:3210/concept-a/" : "https://plastere3125.github.io/jpinno-internal-ru9mm/concept-a/")).replace(/\/?$/, "/");
   // 세부페이지 캐시 방지: GitHub Pages가 HTML을 10분간 저장 → 배포 직후에도 옛 세부페이지가 뜨지 않게 링크 뒤에 배포 버전 표시
-  var V = "?v=261123r";
+  var V = "?v=261123e";
   var to = function (p) { return BASE + p + V; };
   var MENU = [
     ["회사소개", "company/overview/", [["회사개요", "company/overview/"], ["CEO 인사말", "company/ceo/"], ["비전", "company/vision/"], ["연혁·조직", "company/history/"], ["주요 고객사", "company/clients/"], ["오시는 길", "company/location/"]]],
