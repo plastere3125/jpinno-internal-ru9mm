@@ -28,14 +28,14 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
 <nav class="drawer" aria-label="전체 메뉴"></nav>
 
 <main>
-  <!-- ① 첫 화면: 자사 브랜드 영상(4K 원본) 자막 없는 장면 3컷 -->
+  <!-- ① 첫 화면: 1장=자사 공장 항공, 2~6장=Unsplash 무료 라이선스 사진(2026-11-23 클라이언트 요청 "영상 캡처 흐림·사업분야와 겹침", 출처 docs/stock-credits.md) -->
   <section class="hero" aria-roledescription="carousel" aria-label="JP이노베이션 소개">
    <div class="hero-inner">
-    <picture class="pre p1" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/equipment-m.jpg"><img src="assets/hero/equipment.jpg" alt=""></picture>
-    <picture class="pre p2" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/cosmetics-m.jpg"><img src="assets/hero/cosmetics.jpg" alt=""></picture>
-    <picture class="pre p3" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/battery-m.jpg"><img src="assets/hero/battery.jpg" alt=""></picture>
-    <picture class="pre p4" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/cleanroom-m.jpg"><img src="assets/hero/cleanroom.jpg" alt=""></picture>
-    <picture class="pre p5" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/forest-m.jpg"><img src="assets/hero/forest.jpg" alt=""></picture>
+    <picture class="pre p1" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/s2-pharma-m.jpg"><img src="assets/hero/s2-pharma.jpg" alt=""></picture>
+    <picture class="pre p2" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/s2-cosmetics-m.jpg"><img src="assets/hero/s2-cosmetics.jpg" alt=""></picture>
+    <picture class="pre p3" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/s2-battery-m.jpg"><img src="assets/hero/s2-battery.jpg" alt=""></picture>
+    <picture class="pre p4" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/s3-electronic-m.jpg"><img src="assets/hero/s3-electronic.jpg" alt=""></picture>
+    <picture class="pre p5" aria-hidden="true"><source media="(max-width: 767px)" srcset="assets/hero/s2-esg-m.jpg"><img src="assets/hero/s2-esg.jpg" alt=""></picture>
     <div class="slides">
     <div class="slide on" aria-roledescription="slide" aria-label="1 / 6">
       <picture><source media="(max-width: 767px)" srcset="assets/hero/aerial-m.jpg"><img src="assets/hero/aerial.jpg" alt="JP이노베이션 본사 공장 항공 전경"></picture>
@@ -46,15 +46,15 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       </div></div>
     </div>
     <div class="slide" aria-roledescription="slide" aria-label="2 / 6">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/equipment-m.jpg"><img src="assets/hero/equipment.jpg" alt="스테인리스 공정 설비" loading="lazy"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/s2-pharma-m.jpg"><img src="assets/hero/s2-pharma.jpg" alt="앰플 충전 생산 라인" loading="lazy"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Pharma &amp; Bio</p>
         <h2><span class="ln"><span>제약, 바이오 산업</span></span><span class="ln"><span>EPC Engineering</span></span></h2>
         <p class="ko">합성, 반응, 정제, 건조 공정에 필요한 모든 엔지니어링과 장비 구축</p>
       </div></div>
     </div>
-    <div class="slide" aria-roledescription="slide" aria-label="3 / 6">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/cosmetics-m.jpg"><img src="assets/hero/cosmetics.jpg" alt="화장품 충전 공정" loading="lazy"></picture>
+    <div class="slide dense" aria-roledescription="slide" aria-label="3 / 6">
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/s2-cosmetics-m.jpg"><img src="assets/hero/s2-cosmetics.jpg" alt="화장품 생산 설비" loading="lazy"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Cosmetics</p>
         <h2><span class="ln"><span>화장품</span></span><span class="ln"><span>제조산업</span></span></h2>
@@ -62,7 +62,7 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       </div></div>
     </div>
     <div class="slide" aria-roledescription="slide" aria-label="4 / 6">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/battery-m.jpg"><img src="assets/hero/battery.jpg" alt="전기차 충전 장면" loading="lazy"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/s2-battery-m.jpg"><img src="assets/hero/s2-battery.jpg" alt="전기차 충전 장면" loading="lazy"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Secondary Battery</p>
         <h2><span class="ln"><span>2차전지 소재</span></span><span class="ln"><span>생산 공정</span></span></h2>
@@ -70,7 +70,7 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       </div></div>
     </div>
     <div class="slide" aria-roledescription="slide" aria-label="5 / 6">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/cleanroom-m.jpg"><img src="assets/hero/cleanroom.jpg" alt="클린룸 설비" loading="lazy"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/s3-electronic-m.jpg"><img src="assets/hero/s3-electronic.jpg" alt="반도체 웨이퍼" loading="lazy"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">Electronic Materials</p>
         <h2><span class="ln"><span>전자소재 산업 및</span></span><span class="ln"><span>기타 Engineering</span></span></h2>
@@ -78,7 +78,7 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       </div></div>
     </div>
     <div class="slide" aria-roledescription="slide" aria-label="6 / 6">
-      <picture><source media="(max-width: 767px)" srcset="assets/hero/forest-m.jpg"><img src="assets/hero/forest.jpg" alt="숲 항공 전경" loading="lazy"></picture>
+      <picture><source media="(max-width: 767px)" srcset="assets/hero/s2-esg-m.jpg"><img src="assets/hero/s2-esg.jpg" alt="풍력 발전 단지 항공 전경" loading="lazy"></picture>
       <div class="copy"><div class="wrap">
         <p class="eyebrow">ESG</p>
         <h2><span class="ln"><span>지속가능한</span></span><span class="ln"><span>ESG 경영</span></span></h2>
@@ -125,11 +125,11 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
       <p class="eyebrow-s">Business</p>
       <h2 class="sec-title" id="biz-t">사업분야</h2>
       <div class="stage">
-        <div class="biz-panel on" role="tabpanel"><img class="bg" src="assets/biz/bg-real-epc.jpg" alt="JP이노베이션 본사 공장 항공 전경" loading="eager"><div class="txt"><p class="no">01</p><h3>EPC 엔지니어링</h3><p class="en">EPC Engineering</p><ul><li>EPC (Turn-Key방식) 사업수행 - 엔지니어링설계, 장비제작, 시공 및 사후관리</li><li>Global Standard Project 수행절차로 프로젝트 진행</li><li>Business Partner 사와 협력을 통해 성공적인 투자성과 제공</li></ul><a class="pill" href="#" data-to="business/epc-engineering/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-real-battery.jpg" alt="스테인리스 믹싱 탱크" loading="lazy"><div class="txt"><p class="no">02</p><h3>이차전지</h3><p class="en">Secondary Battery</p><ul><li>양극재 및 음극재 믹싱장비 (Mixing Equipment - Engineering &amp; Manufacturing)</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>믹싱 제조시설 엔지니어링 설계, 장비제작 및 시공</li></ul><a class="pill" href="#" data-to="business/secondary-battery/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-real-cosmetics.jpg" alt="화장품 충전 공정" loading="lazy"><div class="txt"><p class="no">03</p><h3>화장품</h3><p class="en">Cosmetics</p><ul><li>공정의 특성에 맞는 특수한 기능과 메커니즘을 반영하여 믹서, 반응기, 여과기, 건조기 등을 제안, 적용</li><li>각 공정에 맞는 EPC Project 플랜트 설계 및 건설 수행</li></ul><a class="pill" href="#" data-to="business/cosmetics/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-real-pharma.jpg" alt="제약 설비" loading="lazy"><div class="txt"><p class="no">04</p><h3>제약·바이오</h3><p class="en">Pharma &amp; Bio</p><ul><li>합성, 반응, 정제, 건조 공정에 필요한 모든 엔지니어링과 장비 구축</li><li>공정 제안, 시스템 구축, 플랜트 건설 수행</li><li>GMP 준수, 무균 청정 관리, 밸리데이션 제공</li></ul><a class="pill" href="#" data-to="business/pharma-bio/">자세히 보기 →</a></div></div>
-        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-real-electronic.jpg" alt="클린룸 설비" loading="lazy"><div class="txt"><p class="no">05</p><h3>전자소재</h3><p class="en">Electronic Materials</p><ul><li>고품질의 특수합금(티타늄, 지르코늄)소재를 사용하여 제작 및 설치</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>정밀가공 및 고도의 제품 완성도를 자랑하는 전문성을 확보</li></ul><a class="pill" href="#" data-to="business/electronic-materials/">자세히 보기 →</a></div></div>
+        <div class="biz-panel on" role="tabpanel"><img class="bg" src="assets/biz/s2-epc.jpg" alt="가스 플랜트 설비와 엔지니어" loading="eager"><div class="txt"><p class="no">01</p><h3>EPC 엔지니어링</h3><p class="en">EPC Engineering</p><ul><li>EPC (Turn-Key방식) 사업수행 - <span class="nw">엔지니어링설계, 장비제작,</span> <span class="nw">시공 및 사후관리</span></li><li>Global Standard Project 수행절차로 프로젝트 진행</li><li>Business Partner 사와 협력을 통해 성공적인 투자성과 제공</li></ul><a class="pill" href="#" data-to="business/epc-engineering/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/s2-battery.jpg" alt="이차전지 생산 설비" loading="lazy"><div class="txt"><p class="no">02</p><h3>이차전지</h3><p class="en">Secondary Battery</p><ul><li>양극재 및 음극재 믹싱장비 (Mixing Equipment - Engineering &amp; Manufacturing)</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>믹싱 제조시설 엔지니어링 설계, 장비제작 및 시공</li></ul><a class="pill" href="#" data-to="business/secondary-battery/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/s2-cosmetics.jpg" alt="화장품 원료 배합" loading="lazy"><div class="txt"><p class="no">03</p><h3>화장품</h3><p class="en">Cosmetics</p><ul><li>공정의 특성에 맞는 특수한 기능과 메커니즘을 반영하여 믹서, 반응기, 여과기, 건조기 등을 제안, 적용</li><li>각 공정에 맞는 EPC Project 플랜트 설계 및 건설 수행</li></ul><a class="pill" href="#" data-to="business/cosmetics/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/s2-pharma.jpg" alt="무균 제약 생산 설비" loading="lazy"><div class="txt"><p class="no">04</p><h3>제약·바이오</h3><p class="en">Pharma &amp; Bio</p><ul><li>합성, 반응, 정제, 건조 공정에 필요한 모든 엔지니어링과 장비 구축</li><li>공정 제안, 시스템 구축, 플랜트 건설 수행</li><li>GMP 준수, 무균 청정 관리, 밸리데이션 제공</li></ul><a class="pill" href="#" data-to="business/pharma-bio/">자세히 보기 →</a></div></div>
+        <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/s3-electronic.jpg" alt="반도체 클린룸" loading="lazy"><div class="txt"><p class="no">05</p><h3>전자소재</h3><p class="en">Electronic Materials</p><ul><li>고품질의 특수합금(티타늄, 지르코늄)소재를 사용하여 제작 및 설치</li><li>Global 고객사와 지속적인 사업 협업을 통한 다수의 Projects 수행</li><li>정밀가공 및 고도의 제품 완성도를 자랑하는 전문성을 확보</li></ul><a class="pill" href="#" data-to="business/electronic-materials/">자세히 보기 →</a></div></div>
         <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-sub-petro-bg.jpg" alt="석유화학 플랜트 야경" loading="lazy"><div class="txt"><p class="no">06</p><h3>석유화학</h3><p class="en">Gas &amp; Petrochemical Plant</p><ul><li>Gas, Petrol Chemical, Oil Refinery Plant EPC기반 엔지니어링 설계, 장비제작, 시공 및 사업관리</li><li>베트남 등 해외법인 설립, 해외시장 진출 및 사업 진행</li></ul><a class="pill" href="#" data-to="business/petrochemical/">자세히 보기 →</a></div></div>
         <div class="biz-panel" role="tabpanel"><img class="bg" src="assets/biz/bg-real-construction.jpg" alt="JP이노베이션 본사 정문과 공장동" loading="lazy"><div class="txt"><p class="no">07</p><h3>건설산업</h3><p class="en">Construction</p><ul><li>EPC Project 엔지니어링과 Plant 시공, 건설 수행</li><li>이차전지, 반도체/전자소재, 제약, 바이오, 정밀화학, 석유화학 분야 국내외 고객사와 다양한 Plant 건설 실적 보유</li></ul><a class="pill" href="#" data-to="business/construction/">자세히 보기 →</a></div></div>
       </div>
@@ -158,17 +158,17 @@ if(!back&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/static/.tes
     <div class="wrap">
       <div class="head reveal"><div><p class="eyebrow-s">Performance</p><h2 class="sec-title" id="perf-t">주요 수행실적</h2><p class="sec-desc">이차전지, 반도체/전자소재, 제약, 바이오, 정밀화학, 석유화학 분야 국내외 고객사와 다양한 Plant 건설 실적 보유</p></div><a class="pill line" href="#" data-to="tech/projects/">전체 수행실적 →</a></div>
       <div class="grid reveal">
-        <a class="case" href="#" data-to="tech/projects/p02/">
+        <a class="case" href="#" data-to="tech/projects/">
           <img src="assets/astech-2nd-plant.jpg" alt="에이에스텍 장항 2공장 준공 외관">
           <span class="go">→</span>
           <div class="info"><span class="tag">바이오 · 2024–2026</span><h3>에이에스텍 장항 2공장 신축</h3><p>EPC 전 과정 수행 · 2026.5 준공</p></div>
           <span class="res">준공 실사 · 홍보센터 게시 이미지</span>
         </a>
         <div class="facts">
-          <a class="fact dark" href="#" data-to="tech/certifications/"><span>ASME 인증</span><div><b>U·U2·U3</b><em>S·PP 포함 5종 보유</em></div></a>
+          <a class="fact dark" href="#" data-to="tech/certifications/"><span>인증</span><div><b>U·U2·U3</b><em>S·PP 포함 5종 보유</em></div></a>
           <a class="fact img" href="#" data-to="products/reactor/filter-reactor/"><span>특허 장비</span><img src="assets/fr-full.webp" alt=""><div><b>필터 리액터</b><em>반응·세정·여과를<br>한 장비에서</em></div></a>
           <a class="fact" href="#" data-to="tech/certifications/"><span>면허</span><div><b style="font-size:28px;line-height:1.3">산업·환경설비<br>공사업</b><em>건설업 등록</em></div></a>
-          <a class="fact" href="#" data-to="tech/projects/"><span>주요 수행실적</span><div><b>24<small>건</small></b><em>현장 사진 공개 프로젝트 기준</em></div></a>
+          <a class="fact" href="#" data-to="company/history/"><span>연혁</span><div><b>2008<small>~</small></b><em><span class="nw">Jeil ENC 설립부터</span><br><span class="nw">2026 종합건설</span> <span class="nw">면허 취득까지</span></em></div></a>
         </div>
       </div>
     </div>
