@@ -117,8 +117,7 @@
     bRun();
   };
   if (bPause) { if (reduce || /static/.test(location.search)) bPause.hidden = true; bPause.addEventListener("click", function () { setBAuto(!bAuto); }); }
-  // 사진 설명(출처 성격) 표시
-  panels.forEach(function (pn) { var im = pn.querySelector(".bg"); if (im && im.dataset.cap) { var c = document.createElement("span"); c.className = "cap"; c.textContent = im.dataset.cap; pn.appendChild(c); } });
+
   tabs.forEach(function (t, i) {
     t.addEventListener("click", function () { if (bAuto) setBAuto(false); go2(i); });
     t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { if (bAuto) setBAuto(false); } if (e.key === "ArrowRight") go2((i + 1) % tabs.length, true); if (e.key === "ArrowLeft") go2((i - 1 + tabs.length) % tabs.length, true); });

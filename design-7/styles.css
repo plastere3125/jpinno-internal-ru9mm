@@ -416,11 +416,9 @@ html.js-intro:not(.intro-done) { overflow: hidden; }
 
 /* 사업분야 사진: 프로젝트명 표기, 공정 모식도는 잘리지 않게 */
 .biz-panel .pic { position: relative; }
-.biz-panel .pic .cap { position: absolute; left: 18px; bottom: 18px; font-size: 12.5px; font-weight: 600; color: #fff; background: rgba(15,18,24,.6); backdrop-filter: blur(4px); padding: 7px 12px; border-radius: 14px; }
 .biz-panel .pic.diagram { background: #fff; padding: 28px 28px 56px; }
 .biz-panel .pic.diagram img { object-fit: contain; }
-.biz-panel .pic.diagram .cap { background: var(--navy); }
-@media (max-width: 767px) { .biz-panel .pic.diagram { padding: 12px 12px 44px; } .biz-panel .pic .cap { left: 12px; bottom: 12px; font-size: 11px; } }
+@media (max-width: 767px) { .biz-panel .pic.diagram { padding: 12px 12px 44px; } }
 
 .prod-grid li { display: flex; }
 .prod-grid li > a { flex: 1; }
@@ -595,8 +593,6 @@ a.fact:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(2
 .biz-panel .txt .pill { margin-top: auto; align-self: flex-start; }
 .biz-panel.on .txt > * { animation: bizTxt .45s ease both; }
 @keyframes bizTxt { from { opacity: 0; } to { opacity: 1; } }
-.biz-panel .cap { position: absolute; z-index: 3; right: 16px; bottom: 16px; max-width: calc(56% - 32px); font-size: 12.5px; font-weight: 600; color: #fff; background: rgba(15,18,24,.62); backdrop-filter: blur(4px); padding: 6px 12px; border-radius: 14px; opacity: 0; transition: opacity .45s ease; }
-.biz-panel.on .cap { opacity: 1; }
 .biz-panel .bg[src*="r-cosmetics"] { object-fit: contain; background: #e9edf2; }
 .biz-pause { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.7); padding: 6px 2px; }
 .biz-pause:hover { color: #fff; }
@@ -604,13 +600,9 @@ a.fact:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(2
 @media (max-width: 767px) {
   .biz .stage { height: 640px; }
   .biz-panel .txt { top: 262px; bottom: 8px; }
-  .biz-panel .cap { right: 10px; bottom: auto; top: 196px; max-width: calc(100% - 20px); font-size: 11px; }
-}
+  }
 @media (max-width: 380px) { .biz .stage { height: 690px; } }
-@media (prefers-reduced-motion: reduce) { .biz-panel .bg, .biz-panel.on .bg, .biz-panel .cap, .biz-panel.on .cap, .biz-panel, .biz-panel.on, .biz-panel.on .txt > * { transition: none; animation: none; } }
-/* 2026-11-23 b: 생성(콘셉트) 이미지 표기 */
-.slide .hero-note { position: absolute; z-index: 3; right: 40px; bottom: 132px; font-size: 11.5px; font-weight: 600; letter-spacing: .02em; color: rgba(255,255,255,.75); background: rgba(10,14,20,.45); padding: 5px 10px; border-radius: 12px; }
-@media (max-width: 767px) { .slide .hero-note { right: 16px; bottom: auto; top: 76px; font-size: 10.5px; } }
+@media (prefers-reduced-motion: reduce) { .biz-panel .bg, .biz-panel.on .bg, .biz-panel, .biz-panel.on, .biz-panel.on .txt > * { transition: none; animation: none; } }
 /* 2026-11-23 c: 이미지별 초점 — 전자소재는 PC 액자(1.28:1)에서 오른쪽 여과·건조 설비가 잘리지 않게 */
 @media (min-width: 768px) { .biz-panel .bg[src*="g-electronic"] { object-position: 72% 50%; } }
 /* 2026-11-23 c-2: 모바일 이미지별 초점(액자 약 1.33~1.46:1, 첫 화면 세로 약 0.46~0.49:1) — 늘이지 않고 위치만 지정 */
