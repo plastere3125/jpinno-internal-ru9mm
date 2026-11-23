@@ -582,3 +582,29 @@ a.fact:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(2
 .fact .nw { white-space: nowrap; }
 /* 밝은 사진(흰 가운·흰 벽) 위 글씨 대비 확보: 해당 장만 왼쪽 음영 강화 */
 @media (min-width: 768px) { .slide.dense::after { background: linear-gradient(90deg, rgba(8,12,18,.82) 0%, rgba(8,12,18,.6) 46%, rgba(8,12,18,.08) 78%), linear-gradient(0deg, rgba(8,12,18,.5), rgba(8,12,18,0) 34%); } }
+
+/* ── 2026-11-23 수정본 v7 ─────────────────────────────────────────────
+   첫 화면 3장(기업·제작·엔지니어링): 진행 표시 3칸 */
+.hero-ctrl ol { grid-template-columns: repeat(3, 1fr); max-width: 760px; }
+/* 사업분야: 짧은 페이드 전환(0.45초), 글·버튼 위치 고정(분야마다 높이가 달라도 제목·버튼이 튀지 않게) */
+.biz-panel, .biz-panel.on { transition: visibility 0s .45s; }
+.biz-panel.on { transition: none; }
+.biz-panel .bg, .biz-panel.on .bg { clip-path: inset(0 round var(--r)); animation: none; opacity: 0; transition: opacity .45s ease; }
+.biz-panel.on .bg { opacity: 1; }
+.biz-panel .txt { top: 48px; bottom: 48px; transform: none; display: flex; flex-direction: column; }
+.biz-panel .txt .pill { margin-top: auto; align-self: flex-start; }
+.biz-panel.on .txt > * { animation: bizTxt .45s ease both; }
+@keyframes bizTxt { from { opacity: 0; } to { opacity: 1; } }
+.biz-panel .cap { position: absolute; z-index: 3; right: 16px; bottom: 16px; max-width: calc(56% - 32px); font-size: 12.5px; font-weight: 600; color: #fff; background: rgba(15,18,24,.62); backdrop-filter: blur(4px); padding: 6px 12px; border-radius: 14px; opacity: 0; transition: opacity .45s ease; }
+.biz-panel.on .cap { opacity: 1; }
+.biz-panel .bg[src*="r-cosmetics"] { object-fit: contain; background: #e9edf2; }
+.biz-pause { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.7); padding: 6px 2px; }
+.biz-pause:hover { color: #fff; }
+.biz-pause:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; border-radius: 4px; }
+@media (max-width: 767px) {
+  .biz .stage { height: 640px; }
+  .biz-panel .txt { top: 262px; bottom: 8px; }
+  .biz-panel .cap { right: 10px; bottom: auto; top: 196px; max-width: calc(100% - 20px); font-size: 11px; }
+}
+@media (max-width: 380px) { .biz .stage { height: 690px; } }
+@media (prefers-reduced-motion: reduce) { .biz-panel .bg, .biz-panel.on .bg, .biz-panel .cap, .biz-panel.on .cap, .biz-panel, .biz-panel.on, .biz-panel.on .txt > * { transition: none; animation: none; } }

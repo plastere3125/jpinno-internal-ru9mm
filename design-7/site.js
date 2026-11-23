@@ -4,7 +4,7 @@
   var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   var BASE = (new URLSearchParams(location.search).get("base") || (LOCAL ? "http://localhost:3210/concept-a/" : "https://plastere3125.github.io/jpinno-internal-ru9mm/concept-a/")).replace(/\/?$/, "/");
   // 세부페이지 캐시 방지: GitHub Pages가 HTML을 10분간 저장 → 배포 직후에도 옛 세부페이지가 뜨지 않게 링크 뒤에 배포 버전 표시
-  var V = "?v=261123";
+  var V = "?v=261123r";
   var to = function (p) { return BASE + p + V; };
   var MENU = [
     ["회사소개", "company/overview/", [["회사개요", "company/overview/"], ["CEO 인사말", "company/ceo/"], ["비전", "company/vision/"], ["연혁·조직", "company/history/"], ["주요 고객사", "company/clients/"], ["오시는 길", "company/location/"]]],
@@ -96,9 +96,9 @@
     tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i); t.tabIndex = j === i ? 0 : -1; panels[j].classList.toggle("on", j === i); });
     if (focus) tabs[i].focus();
   };
-  // 자동 롤링: 3초 간격, 구간이 화면에 보일 때만, 마우스를 올리거나 키보드 포커스 중에는 멈춤. 동작 줄이기 설정이면 자동 전환 없음
+  // 자동 롤링: 6초 간격(사용자가 분야를 고르면 정지), 구간이 화면에 보일 때만, 마우스를 올리거나 키보드 포커스 중에는 멈춤. 동작 줄이기 설정이면 자동 전환 없음
   var bizBox = document.querySelector(".biz .wrap"), tabBar = document.querySelector(".biz-tabs");
-  var BDUR = 3000, bCur = 0, bTimer = null, bInView = false, bHold = false, bAuto = !reduce && !/static/.test(location.search);
+  var BDUR = 6000, bCur = 0, bTimer = null, bInView = false, bHold = false, bAuto = !reduce && !/static/.test(location.search);
   tabBar.style.setProperty("--bdur", BDUR / 1000 + "s");
   var bRun = function () {
     clearTimeout(bTimer);
@@ -110,9 +110,18 @@
     }
   };
   var go2 = function (i, focus) { tabs[bCur].classList.remove("prog"); bCur = i; sel(i, focus); bRun(); };
+  // 정지 버튼: 사용자가 분야를 직접 고르면 자동 전환을 멈춰 읽기를 방해하지 않음
+  var bPause = document.querySelector(".biz-pause");
+  var setBAuto = function (on) {
+    bAuto = on; if (bPause) { bPause.innerHTML = on ? "❚❚ <span>자동 전환 정지</span>" : "▶ <span>자동 전환 재생</span>"; bPause.setAttribute("aria-label", on ? "사업분야 자동 전환 정지" : "사업분야 자동 전환 재생"); }
+    bRun();
+  };
+  if (bPause) { if (reduce || /static/.test(location.search)) bPause.hidden = true; bPause.addEventListener("click", function () { setBAuto(!bAuto); }); }
+  // 사진 설명(출처 성격) 표시
+  panels.forEach(function (pn) { var im = pn.querySelector(".bg"); if (im && im.dataset.cap) { var c = document.createElement("span"); c.className = "cap"; c.textContent = im.dataset.cap; pn.appendChild(c); } });
   tabs.forEach(function (t, i) {
-    t.addEventListener("click", function () { go2(i); });
-    t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") go2((i + 1) % tabs.length, true); if (e.key === "ArrowLeft") go2((i - 1 + tabs.length) % tabs.length, true); });
+    t.addEventListener("click", function () { if (bAuto) setBAuto(false); go2(i); });
+    t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { if (bAuto) setBAuto(false); } if (e.key === "ArrowRight") go2((i + 1) % tabs.length, true); if (e.key === "ArrowLeft") go2((i - 1 + tabs.length) % tabs.length, true); });
   });
   bizBox.addEventListener("mouseenter", function () { bHold = true; bRun(); });
   bizBox.addEventListener("mouseleave", function () { bHold = false; bRun(); });
